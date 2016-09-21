@@ -1,1 +1,1 @@
-# Movies-and-Chill
+# Entertainment Pursuit

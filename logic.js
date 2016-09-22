@@ -1,25 +1,48 @@
+// var queryTerm = "";
+// var numRecords = 0;
 
-alert("test");
+// var eventCounter = 0;
 
-var myTocken = JYDJ72HUJUICRHCZHK;
 
-/* When the user clicks on the button,
-                toggle between hiding and showing the dropdown content */
-function myFunction() {
-    document.getElementById("myDropdown").classList.toggle("show");
-}
+    $(document).ready(function() {
+        // var token = "JYDJ72HUJUICRHCZHK";
+        var token = "QLHOEK56CPJPK5QOKFWG";
+        var events = $("#events");
 
-function filterFunction() {
-    var input, filter, ul, li, a, i;
-    input = document.getElementById("myInput");
-    filter = input.value.toUpperCase();
-    div = document.getElementById("myDropdown");
-    a = div.getElementsByTagName("a");
-    for (i = 0; i < a.length; i++) {
-        if (a[i].innerHTML.toUpperCase().indexOf(filter) > -1) {
-            a[i].style.display = "";
-        } else {
-            a[i].style.display = "none";
-        }
-    }
-}
+        $.get('https://www.eventbriteapi.com/v3/events/search/?token='+token+'&expand=venue', function(res) {
+            if(res.events.length) {
+                var s = "<ul class='eventList'>";
+                for(var i=0;i<res.events.length;i++) {
+                    var event = res.events[i];
+                    console.dir(event);
+                    s += "<li><a href='" + event.url + "'>" + event.name.text + "</a> - " + event.description.text + "</li>";
+                }
+                s += "</ul>";
+                $events.html(s);
+            } else {
+                $events.html("<p>Sorry, there are no upcoming events.</p>");
+            }
+        });
+    });
+
+// $("#searchBtn").on('click', function() {
+//     // add search term
+//     var queryTerm = $("#search").val().trim();
+//     // the new URL includes the search term
+//     var newURL = queryURLBase + "&q=" + queryTerm;
+//     // add the number of records to retrieve
+//     var numRecords = $("#numRecords").val();
+
+//     // runQuery(numRecords, newURL);
+
+//     return false;
+// });
+//     // AJAX FUnction
+//     $.ajax({ url: newURL, type: 'GET', })
+//         .done(function(eventBrite) {
+
+//             $("#listEvents").append("<h5>Section: " + eventBrite.response. + "</h5>"); //section
+//                 });
+        
+
+

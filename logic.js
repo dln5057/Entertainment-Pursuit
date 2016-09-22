@@ -1,7 +1,7 @@
 
 alert("test");
 
-var myTocken = JYDJ72HUJUICRHCZHK;
+var myTocken = "JYDJ72HUJUICRHCZHK";
 
 /* When the user clicks on the button,
                 toggle between hiding and showing the dropdown content */

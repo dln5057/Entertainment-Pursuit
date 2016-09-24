@@ -13,7 +13,7 @@ $('button').on('click', function(){
 $.each(events.slice(0,10), function(index, value){ 
     console.log(value.name);
 
-    $("#eventList").append(events.name)
+    $("#eventList").append(value.name)
     })
   })
 })

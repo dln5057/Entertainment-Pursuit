@@ -1,7 +1,7 @@
 console.log("loaded");
-var eventLocation = "Country";
+var eventLocation;
 $('button').on('click', function(){
-    
+    eventLocation = $("input.form-control").val();
     var queryURL = "https://app.ticketmaster.com/discovery/v2/events.Json?apikey=cAnARp0Bdf5EhZsX9PCXuiOGzhkmhFM7&keyword=" + eventLocation
 
     $.ajax({url: queryURL, method: 'GET'}).done(function(response) {

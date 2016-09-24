@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Entertainment Pursuit</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link type="text/css" rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link type="text/css" rel="stylesheet" href="style.css">
+    <!-- Firebase reference -->
+    <script src="https://www.gstatic.com/firebasejs/3.4.0/firebase.js"></script>
+</head>
+
+<body>
+    <div class="fluid">
+        <div class="jumbotron">
+            <h1>Find Events Nearby</h1>
+        </div>
+    </div>
+    <div class="row container">
+        <div class="col-lg-6">
+            <div id="map" style="width:100%;height:500px"></div>
+        </div>
+        <div class="col-lg-6">
+            <div class="row">
+                <div class="col-sm-12">
+                    <form>
+                        <div class="input-group">
+                            <span class="input-group-btn">
+                                <button class="btn btn-default" type="button">Go!</button>
+                                </span>
+                            <input type="text" class="form-control" placeholder="Search by zipcode">
+                        </div>
+                        <br>
+                        <button type="submit" class="btn btn-default" id="searchByLocation">Near me</button>
+                        <button type="button" class="btn btn-default" id="clearBtn">Clear</button>
+                    </form>
+                </div>
+            </div>
+            <br>
+            <div class="row">
+                <div class="col-sm-12">
+                        <div class="panel panel-default">
+                            <div class="panel-heading">
+                                <h3 class="panel-title">Search Results</h3>
+                            </div>
+
+                        <div class="panel-body" id="eventList">
+                            </div>
+                        </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+    function myMap() {
+        var mapCanvas = document.getElementById("map");
+
+        var mapOptions = {
+            center: new google.maps.LatLng(40.5, -74.5),
+            zoom: 10
+        }
+        var map = new google.maps.Map(mapCanvas, mapOptions);
+    }
+    </script>
+    <!-- script ref-->
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+    <script src="assets/Javascript/ticketmaster.js"></script>
+    <script src="logic.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?callback=myMap"></script>
+</body>
+
+</html>

@@ -1,8 +1,5 @@
 console.log("loaded");
 
-var eventLocation = "Country";
-$('button').on('click', function() {
-
 var eventLocation;
 $('button').on('click', function(){
     eventLocation = $("input.form-control").val();
@@ -17,9 +14,26 @@ $('button').on('click', function(){
         var events = response._embedded.events;
         $.each(events.slice(0, 10), function(index, value) {
             console.log(value.name);
+            var eventDiv = $('<div class="item">')
+            var eventName = value.name;
+            var p = $('<p>').text( "Name of Event: " + eventName);
+            var eventImage = $('<img>');
+            $('img').addClass('posterImages');
+            var eventPoster = value.images;
+            $.each(eventPoster.slice(0, 1), function(index, source) {
+                var poster = source.url;
+                eventImage.attr('src', poster);
+                eventDiv.append(p);
+                eventDiv.append(eventImage)
 
 
-    $("#eventList").append(value.name)
 
+                console.log(value.images)
+
+
+                $("#eventList").prepend(eventDiv);
+
+            })
+        })
     })
 })

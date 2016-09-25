@@ -44,3 +44,8 @@
 .dropdown a:hover {background-color: #ddd}
 
 .show {display:block;}
+
+img.posterImages{
+    width: 300px;
+    height: 200px;
+}

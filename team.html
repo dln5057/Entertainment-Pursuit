@@ -27,6 +27,7 @@
     <div class="row">
         <nav class="navbar navbar-inverse">
             <ul class="nav nav-tabs">
+                <li role="presentation"><a href="landing.html">Home</a></li>
                 <li role="presentation"><a href="team.html">Team</a></li>
                 <li role="presentation"><a href="#">Presentation</a></li>
                 <li role="presentation"><a href="#">Inspiration</a></li>
@@ -42,37 +43,24 @@
             </ul>
         </nav>
     </div>
+
     <div class="container">
         <div class="row">
-            <div class="gore fade-in one">
-                <p>Entertainment Pursuit</p>
-                <!-- <h1 class="fade-in two">Helps you find entertainement nearby</h1> -->
+            <div class="gore fade-in one col-md-12">
+                <p>The Team</p>
             </div>
         </div>
-    </div>
-    <div class="form">
-    <form class="fade-in two">
-        <div class="form-group">
-            <label for="search" class="form"><h1>Search events by keyword</h1></label>
-            <input type="text" class="form-control" id="search" placeholder="Search by keyword:">
-        </div>
 
-        <button type="submit" class="btn btn-default">Search</button>
-    </form>
-    </div>
-
-    <div class="row fade-in three">
-        <div class="col-sm-12">
-            <div class="panel panel-default">
-                <div class="panel-heading">
-                    <h3 class="panel-title">Results</h3>
-                </div>
-                <div class="panel-body" id="eventList">
-                </div>
-            </div>
+        <div class="row" id="team">
+            <div class="img-responsive fade-in two col-md-3" style="background-image:url('assets/louis.jpg');">
+                <h2 class="fade-in three">Louis Huang</h2></div>
+            <div class="img-responsive fade-in two col-md-3" style="background-image:url('assets/m.jpg');">
+                <h2 class="fade-in three">Marija Naumoski</h2></div>
+            <div class="img-responsive fade-in two col-md-3" style="background-image:url('http://placehold.it/350x150');">
+                <h2 class="fade-in three">Gerardo Mestanza</h2></div>
+            <div class="img-responsive fade-in two col-md-3" style="background-image:url('assets/d.jpg');">
+                <h2 class="fade-in three">Donnie Nowels</h2></div>
         </div>
-    </div>
-    </div>
     </div>
     <div class="navbar navbar-default navbar-fixed-bottom">
         <div class="container">
@@ -80,23 +68,6 @@
             </p>
         </div>
     </div>
-    <!-- <script> -->
-    <!--  // function myMap() {
-            //     var mapCanvas = document.getElementById("map");
-
-            //     var mapOptions = {
-            //         center: new google.maps.LatLng(40.5, -74.5),
-            //         zoom: 10
-            //     }
-            //     var map = new google.maps.Map(mapCanvas, mapOptions);
-            // }
-            </script>
-            -->
-    <!-- script ref-->
-    <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
-    <script src="assets/Javascript/ticketmaster.js"></script>
-    <script src="logic.js"></script>
-    <script src="https://maps.googleapis.com/maps/api/js?callback=myMap"></script>
 </body>
 
 </html>

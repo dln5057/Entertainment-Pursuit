@@ -9,7 +9,7 @@ body {
     text-align: center;
     font-family: 'Lobster', serif;
     font-size: 100px;
-    color: white;
+    color: #d3d3d3;
     height: 100%;
 }
 
@@ -163,4 +163,8 @@ serif;*/
     font-size: 20px;
     font-size: 20px;
 
+}
+
+#user {
+    font-size: 15px;
 }

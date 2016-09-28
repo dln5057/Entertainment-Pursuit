@@ -20,7 +20,7 @@
     <!-- Firebase reference -->
     <script src="https://www.gstatic.com/firebasejs/3.4.0/firebase.js"></script>
     <!-- style ref -->
-    <link type="text/css" rel="stylesheet" href="assets/style.css">
+    <link type="text/css" rel="stylesheet" href="assets/fstyle.css">
 </head>
 
 <body>
@@ -46,19 +46,54 @@
             </ul>
         </nav>
     </div>
-    <div class="row">
-        <div class="gore fade-in one">
-            <p>Entertainment Pursuit</p>
-            <h1 class="fade-in two">Helps you find entertainement nearby</h1>
-            <a class="btn btn-default btn-lg fade-in three" href="index.html" role="button">Click for more</a>
+    <div class="container">
+        <div class="row">
+            <div class="gore fade-in one">
+                <p>Entertainment Pursuit</p>
+                <!-- <h1 class="fade-in two">Helps you find entertainement nearby</h1> -->
+            </div>
         </div>
     </div>
+    <main class="mdl-layout__content mdl-color--grey-100" id="user">
+    <div class="mdl-cell mdl-cell--12-col mdl-cell--12-col-tablet mdl-grid" id="user">
+
+      <!-- Container for the demo -->
+      <div class="mdl-card mdl-shadow--2dp mdl-cell mdl-cell--12-col mdl-cell--12-col-tablet mdl-cell--12-col-desktop" id="user">
+        <div id="user" class="mdl-card__title mdl-color--light-blue-600 mdl-color-text--white">
+          <h2 id="user" class="mdl-card__title-text">Firebase Email &amp; Password Authentication</h2>
+        </div>
+        <div id="user" class="mdl-card__supporting-text mdl-color-text--grey-600">
+          <p>Enter an email and password below and either sign in to an existing account or sign up</p>
+
+          <input id="user" class="mdl-textfield__input" style="display:inline;width:auto;" type="text" id="email" name="email" placeholder="Email"/>
+          &nbsp;&nbsp;&nbsp;
+          <input class="mdl-textfield__input" style="display:inline;width:auto;" type="password" id="password" name="password" placeholder="Password"/>
+          <br/><br/>
+          <button disabled class="mdl-button mdl-js-button mdl-button--raised" id="quickstart-sign-in" name="signin">Sign In</button>
+          &nbsp;&nbsp;&nbsp;
+          <button class="mdl-button mdl-js-button mdl-button--raised" id="quickstart-sign-up" name="signup">Sign Up</button>
+          &nbsp;&nbsp;&nbsp;
+          <button class="mdl-button mdl-js-button mdl-button--raised" disabled id="quickstart-verify-email" name="verify-email">Send Email Verification</button>
+          &nbsp;&nbsp;&nbsp;
+          <button class="mdl-button mdl-js-button mdl-button--raised" id="quickstart-password-reset" name="verify-email">Send Password Reset Email</button>
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+
     <div class="navbar navbar-default navbar-fixed-bottom">
         <div class="container">
             <p class="navbar-text pull-left">© 2016 - Site Built by the Entertainers Group
             </p>
         </div>
     </div>
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+    <script src="assets/Javascript/ticketmaster.js"></script>
+    <script src="logic.js"></script>
+    <script src="firebase.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?callback=myMap"></script>
 </body>
 
 </html>

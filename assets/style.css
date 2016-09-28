@@ -132,10 +132,23 @@ serif;*/
 
 }
 
-.panel-default {
+.panel-body {
+    background-color: #ff6666;
+    opacity: 0.5;
 
 }
 
 .panel-heading{
 
+}
+
+.panel-title {
+    text-align: left;
+    font-family: 'Vast Shadow', cursive;
+    font-size: 17px;
+    color: #ff6666;
+}
+
+.btn-default {
+    background-color: #ff6666;
 }

@@ -133,7 +133,7 @@ serif;*/
 }
 
 .panel-body {
-    background-color: #ff6666;
+    background-color: #ddd;
     opacity: 0.5;
 
 }
@@ -154,7 +154,7 @@ serif;*/
 }
 
 .nav-pills {
-    float: right
+    float: right;
 }
 
 .form {

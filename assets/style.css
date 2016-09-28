@@ -23,14 +23,15 @@ body {
 h1 {
     font-family: 'Oswald', sans-serif;
     font-size: 30px;
+    opacity: 0.5;
 
 }
 
 h2 {
 
-    font-family: 'Oswald', sans-serif;
-    font-size: 15px;
-    color: black;
+    font-family: 'Vast Shadow', cursive;
+    font-size: 17px;
+    color: #ff6666;
 }
 
 .navbar-fixed-bottom {
@@ -110,4 +111,31 @@ serif;*/
 }
 #team {
        display: -webkit-inline-box;
+}
+
+.media-object {
+    position: relative;
+    float:left;
+    width:200px;
+    height:200px;
+    background-position: 50% 50%;
+    background-repeat:no-repeat;
+    background-size:cover;
+    margin-left: 100px;
+}
+
+.form {
+    display: -webkit-inline-box;
+    font-size: 20px;
+    font-style: 'Oswald', sans-serif;
+    opacity: 0.7;
+
+}
+
+.panel-default {
+
+}
+
+.panel-heading{
+
 }

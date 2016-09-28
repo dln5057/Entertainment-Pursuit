@@ -22,7 +22,15 @@ body {
 
 h1 {
     font-family: 'Oswald', sans-serif;
-    font-size: 25px;
+    font-size: 30px;
+
+}
+
+h2 {
+
+    font-family: 'Oswald', sans-serif;
+    font-size: 15px;
+    color: black;
 }
 
 .navbar-fixed-bottom {
@@ -86,5 +94,20 @@ serif;*/
 
 .row {
     margin-right: 0px;
-    margin-left: -15px;
+    margin-left: 0px;
+
+
+}
+
+.img-responsive {
+    position: relative;
+    float:left;
+    width:200px;
+    height:200px;
+    background-position: 50% 50%;
+    background-repeat:no-repeat;
+    background-size:cover;
+}
+#team {
+       display: -webkit-inline-box;
 }

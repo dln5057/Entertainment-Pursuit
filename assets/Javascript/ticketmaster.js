@@ -1,9 +1,5 @@
 console.log("loaded");
 
-function createNewMarker(){
-
-    
-// }
 
 
 
@@ -12,7 +8,8 @@ function createNewMarker(){
 
 
 var eventLocation;
-$('button').on('click', function(){
+$('.searchBtn').on('click', function(e){
+    e.preventDefault()
     $('#eventList').empty();
     eventLocation = $("#search").val();
 

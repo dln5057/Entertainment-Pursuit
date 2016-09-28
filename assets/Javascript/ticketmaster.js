@@ -3,7 +3,7 @@ console.log("loaded");
 function createNewMarker(){
 
     
-}
+// }
 
 
 
@@ -14,7 +14,7 @@ function createNewMarker(){
 var eventLocation;
 $('button').on('click', function(){
     $('#eventList').empty();
-    eventLocation = $("input.form-control").val();
+    eventLocation = $("#search").val();
 
     var queryURL = "https://app.ticketmaster.com/discovery/v2/events.Json?apikey=cAnARp0Bdf5EhZsX9PCXuiOGzhkmhFM7&keyword=" + eventLocation
 
@@ -34,7 +34,7 @@ $('button').on('click', function(){
             var latitude = location.latitude;
             var longitude = location.longitude;
             console.log(latitude +" "+longitude);
-            createNewMarker(latitude, longitude);
+            // createNewMarker(latitude, longitude);
             var eventImage = $('<img>');
             $('img').addClass('posterImages');
             var eventPoster = value.images;

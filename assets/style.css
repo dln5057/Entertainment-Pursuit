@@ -1,0 +1,90 @@
+img.posterImages {
+    width: 300px;
+    height: 200px;
+}
+
+body {
+    background-image: url('wall.png');
+    background-repeat: repeat;
+    text-align: center;
+    font-family: 'Lobster', serif;
+    font-size: 100px;
+    color: white;
+    height: 100%;
+}
+
+.nav-tabs {
+    font-size: 15px;
+    font-family: 'Vast Shadow', cursive;
+    margin: 10px;
+
+}
+
+h1 {
+    font-family: 'Oswald', sans-serif;
+    font-size: 25px;
+}
+
+.navbar-fixed-bottom {
+    font-family: 'Vast Shadow', cursive;
+    font-size: 10px;
+    background-image: url('wall.png');
+    background-repeat: repeat;
+}
+/*make keyframse that tell the start state and the end state*/
+@-webkit-keyframes fadeIn { from {opacity: 0;} to {opacity: 1;} }
+@-moz-keyframes fadeIn {from {opacity: 0;} to {opacity: 1;}}
+@keyframes fadeIn {from {opacity: 0;} to {opacity: 1;}}
+
+.fade-in {
+    opacity:0; /* make things invisible upon start */
+    -webkit-animation: fadeIn ease-in 1; /*call keyframe called fadeIn use animattion ease-in and repeat it only 1 time */
+    -moz-animation: fadeIn ease-in 1;
+    animation: fadeIn ease-in 1;
+
+    -webkit-animation-fill-mode: forwards; /*when animation is done it remains at the last keyframe value of opacity 1*/
+    -moz-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+
+    -webkit-animation-duration: 1s;
+    -moz-animation-duration: 1s;
+    animation-duration: 1s;
+}
+
+.fade-in.one {
+    -webkit-animation-delay: 0.7s;
+    -moz-animation-delay: 0.7s;
+    animation-delay: 0.7s;
+}
+
+.fade-in.two {
+    -webkit-animation-delay: 1.2s;
+    -moz-animation-delay: 1.2s;
+    animation-delay: 1.2s;
+}
+
+.fade-in.three {
+    -webkit-animation-delay: 1.6s;
+    -moz-animation-delay: 1.6s;
+    animation-delay: 1.6s;
+}
+
+/*font-family: 'Vast Shadow',
+cursive;
+font-family: 'Playfair Display',
+serif;
+font-family: 'Playfair Display SC',
+serif;*/
+.btn-social-icon {
+    float: right;
+}
+
+.navbar-inverse {
+    /*margin: 50px;*/
+    border: 100px;
+}
+
+.row {
+    margin-right: 0px;
+    margin-left: -15px;
+}

@@ -80,5 +80,11 @@ serif;*/
 }
 
 .navbar-inverse {
-    
+    /*margin: 50px;*/
+    border: 100px;
+}
+
+.row {
+    margin-right: 0px;
+    margin-left: -15px;
 }

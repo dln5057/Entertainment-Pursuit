@@ -8,39 +8,80 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- reset css -->
     <link type="text/css" rel="stylesheet" href="assets/reset.css">
+    <!-- Google fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Oswald|Playfair+Display|Playfair+Display+SC|Vast+Shadow|Lobster|Tangerine" rel="stylesheet">
+    <!-- Font Awsome ref -->
+    <script src="https://use.fontawesome.com/65a539dfcc.js"></script>
     <!-- boostrap ref -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-    <!-- style ref -->
-    <link type="text/css" rel="stylesheet" href="assets/style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap
+.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <!-- social css -->
+    <link type="text/css" rel="stylesheet" href="assets/bootstrap-social.css">
     <!-- Firebase reference -->
     <script src="https://www.gstatic.com/firebasejs/3.4.0/firebase.js"></script>
+    <!-- style ref -->
+    <link type="text/css" rel="stylesheet" href="assets/style.css">
 </head>
 
 <body>
-    <div class="jumbotron">
-        <h1>Entertainment Pursuit</h1>
-        <p>Helps you find entertainement nearby</p>
+    <div class="row">
+        <nav class="navbar navbar-inverse">
+            <ul class="nav nav-tabs">
+                <li role="presentation"><a href="team.html">Team</a></li>
+                <li role="presentation"><a href="#">Presentation</a></li>
+                <li role="presentation"><a href="#">Inspiration</a></li>
+                <a class="btn btn-social-icon btn-twitter"><span class="fa fa-twitter"></span>
+                </a>
+                <a class="btn btn-social-icon btn-facebook"><span class="fa fa-facebook"></span>
+                </a>
+                <a href="https://github.com/dln5057/Entertainment-Pursuit-" class="btn btn-social-icon btn-github"><span class="fa fa-github"></span>
+                </a>
+                </a>
+                <a class="btn btn-social-icon btn-linkedin"><span class="fa fa-linkedin"></span>
+                </a>
+            </ul>
+        </nav>
     </div>
-    <div class="row container">
-        <div class="col-lg-4">
-            <div id="map" style="width:100%;height:500px"></div>
+    <div class="container">
+        <div class="row">
+            <div class="gore fade-in one">
+                <p>Entertainment Pursuit</p>
+                <!-- <h1 class="fade-in two">Helps you find entertainement nearby</h1> -->
+            </div>
         </div>
-        <div class="col-lg-8">
-                        <div class="row">
-                            <div class="col-sm-12">
-                                <div class="panel panel-default">
-                                    <div class="panel-heading">
-                                        <h3 class="panel-title">Search Results</h3>
-                                    </div>
-                                    <div class="panel-body" id="eventList">
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+    </div>
+    <div class="form">
+    <form class="fade-in two">
+        <div class="form-group">
+            <label for="search" class="form"><h1>Search events by keyword</h1></label>
+            <input type="text" class="form-control" id="search" placeholder="Search by keyword:">
+        </div>
+
+        <button type="submit" class="btn btn-default">Search</button>
+    </form>
+    </div>
+
+    <div class="row fade-in three">
+        <div class="col-sm-12">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h3 class="panel-title">Results</h3>
+                </div>
+                <div class="panel-body" id="eventList">
                 </div>
             </div>
-            <script>
-            // function myMap() {
+        </div>
+    </div>
+    </div>
+    </div>
+    <div class="navbar navbar-default navbar-fixed-bottom">
+        <div class="container">
+            <p class="navbar-text pull-left">© 2016 - Site Built by the Entertainers Group
+            </p>
+        </div>
+    </div>
+    <!-- <script> -->
+    <!--  // function myMap() {
             //     var mapCanvas = document.getElementById("map");
 
             //     var mapOptions = {
@@ -50,11 +91,12 @@
             //     var map = new google.maps.Map(mapCanvas, mapOptions);
             // }
             </script>
-            <!-- script ref-->
-            <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
-            <script src="assets/Javascript/ticketmaster.js"></script>
-            <script src="logic.js"></script>
-            <script src="https://maps.googleapis.com/maps/api/js?callback=myMap"></script>
+            -->
+    <!-- script ref-->
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+    <script src="assets/Javascript/ticketmaster.js"></script>
+    <script src="logic.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?callback=myMap"></script>
 </body>
 
 </html>

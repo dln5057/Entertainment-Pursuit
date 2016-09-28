@@ -22,7 +22,16 @@ body {
 
 h1 {
     font-family: 'Oswald', sans-serif;
-    font-size: 25px;
+    font-size: 30px;
+    opacity: 0.5;
+
+}
+
+h2 {
+
+    font-family: 'Vast Shadow', cursive;
+    font-size: 17px;
+    color: #ff6666;
 }
 
 .navbar-fixed-bottom {
@@ -86,5 +95,60 @@ serif;*/
 
 .row {
     margin-right: 0px;
-    margin-left: -15px;
+    margin-left: 0px;
+
+
+}
+
+.img-responsive {
+    position: relative;
+    float:left;
+    width:200px;
+    height:200px;
+    background-position: 50% 50%;
+    background-repeat:no-repeat;
+    background-size:cover;
+}
+#team {
+       display: -webkit-inline-box;
+}
+
+.media-object {
+    position: relative;
+    float:left;
+    width:200px;
+    height:200px;
+    background-position: 50% 50%;
+    background-repeat:no-repeat;
+    background-size:cover;
+    margin-left: 100px;
+}
+
+.form {
+    display: -webkit-inline-box;
+    font-size: 20px;
+    font-style: 'Oswald', sans-serif;
+    opacity: 0.7;
+
+}
+
+.panel-body {
+    background-color: #ff6666;
+    opacity: 0.5;
+
+}
+
+.panel-heading{
+
+}
+
+.panel-title {
+    text-align: left;
+    font-family: 'Vast Shadow', cursive;
+    font-size: 17px;
+    color: #ff6666;
+}
+
+.btn-default {
+    background-color: #ff6666;
 }

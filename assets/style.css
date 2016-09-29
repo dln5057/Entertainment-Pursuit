@@ -152,7 +152,6 @@ serif;*/
 .btn-default {
     background-color: #ff6666;
 }
-
 .nav-pills {
     float: right;
 }
@@ -164,6 +163,11 @@ serif;*/
     font-size: 20px;
 }
 
+
 .grid-item { width: 200px; }
+
+.item{
+    font-size: 30px
+}
 
 .grid-item--width2 { width: 400px; }

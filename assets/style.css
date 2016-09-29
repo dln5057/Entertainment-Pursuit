@@ -153,6 +153,7 @@ serif;*/
     background-color: #ff6666;
 }
 
+<<<<<<< HEAD
 .nav-pills {
     float: right;
 }
@@ -163,4 +164,8 @@ serif;*/
     font-size: 20px;
     font-size: 20px;
 
+=======
+.item{
+    font-size: 30px
+>>>>>>> DJ4
 }

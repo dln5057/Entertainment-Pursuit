@@ -1,12 +1,5 @@
 console.log("loaded");
 
-
-
-
-
-
-
-
 var eventLocation;
 $('.searchBtn').on('click', function(e){
     e.preventDefault()
@@ -24,16 +17,16 @@ $('.searchBtn').on('click', function(e){
         var events = response._embedded.events;
         $.each(events.slice(0, 10), function(index, value) {
             console.log(value.name);
-            var eventDiv = $('<div class="item">')
+            var eventDiv = $('<div class="item grid-item col-xs-3">')
             var eventName = value.name;
-            var p = $('<p>').text( "Name of Event: " + eventName);
+            var p = $('<h4>').text( "Name of Event: " + eventName);
             var location = value._embedded.venues[0].location;
             var latitude = location.latitude;
             var longitude = location.longitude;
             console.log(latitude +" "+longitude);
             // createNewMarker(latitude, longitude);
             var eventImage = $('<img>');
-            $('img').addClass('posterImages');
+            $('img').addClass('posterImages full-w');
             var eventPoster = value.images;
             $.each(eventPoster.slice(0, 1), function(index, source) {
                 var poster = source.url;
@@ -50,5 +43,9 @@ $('.searchBtn').on('click', function(e){
 
             })
         })
+        $grid.imagesLoaded().progress( function() {
+            $grid.masonry( 'reloadItems' );
+            $grid.masonry( 'layout' );
+        });
     })
 })

@@ -1,7 +1,7 @@
-img.posterImages {
+/*img.posterImages {
     width: 300px;
     height: 200px;
-}
+}*/
 
 body {
     background-image: url('wall.png');
@@ -17,18 +17,15 @@ body {
     font-size: 15px;
     font-family: 'Vast Shadow', cursive;
     margin: 10px;
-
 }
 
 h1 {
     font-family: 'Oswald', sans-serif;
     font-size: 30px;
     opacity: 0.5;
-
 }
 
 h2 {
-
     font-family: 'Vast Shadow', cursive;
     font-size: 17px;
     color: #ff6666;
@@ -40,21 +37,48 @@ h2 {
     background-image: url('wall.png');
     background-repeat: repeat;
 }
+
+
 /*make keyframse that tell the start state and the end state*/
-@-webkit-keyframes fadeIn { from {opacity: 0;} to {opacity: 1;} }
-@-moz-keyframes fadeIn {from {opacity: 0;} to {opacity: 1;}}
-@keyframes fadeIn {from {opacity: 0;} to {opacity: 1;}}
+
+@-webkit-keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@-moz-keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
 
 .fade-in {
-    opacity:0; /* make things invisible upon start */
-    -webkit-animation: fadeIn ease-in 1; /*call keyframe called fadeIn use animattion ease-in and repeat it only 1 time */
+    opacity: 0;
+    /* make things invisible upon start */
+    -webkit-animation: fadeIn ease-in 1;
+    /*call keyframe called fadeIn use animattion ease-in and repeat it only 1 time */
     -moz-animation: fadeIn ease-in 1;
     animation: fadeIn ease-in 1;
-
-    -webkit-animation-fill-mode: forwards; /*when animation is done it remains at the last keyframe value of opacity 1*/
+    -webkit-animation-fill-mode: forwards;
+    /*when animation is done it remains at the last keyframe value of opacity 1*/
     -moz-animation-fill-mode: forwards;
     animation-fill-mode: forwards;
-
     -webkit-animation-duration: 1s;
     -moz-animation-duration: 1s;
     animation-duration: 1s;
@@ -78,12 +102,14 @@ h2 {
     animation-delay: 1.6s;
 }
 
+
 /*font-family: 'Vast Shadow',
 cursive;
 font-family: 'Playfair Display',
 serif;
 font-family: 'Playfair Display SC',
 serif;*/
+
 .btn-social-icon {
     float: right;
 }
@@ -96,31 +122,30 @@ serif;*/
 .row {
     margin-right: 0px;
     margin-left: 0px;
-
-
 }
 
 .img-responsive {
     position: relative;
-    float:left;
-    width:200px;
-    height:200px;
+    float: left;
+    width: 200px;
+    height: 200px;
     background-position: 50% 50%;
-    background-repeat:no-repeat;
-    background-size:cover;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
+
 #team {
-       display: -webkit-inline-box;
+    display: -webkit-inline-box;
 }
 
 .media-object {
     position: relative;
-    float:left;
-    width:200px;
-    height:200px;
+    float: left;
+    width: 200px;
+    height: 200px;
     background-position: 50% 50%;
-    background-repeat:no-repeat;
-    background-size:cover;
+    background-repeat: no-repeat;
+    background-size: cover;
     margin-left: 100px;
 }
 
@@ -129,18 +154,13 @@ serif;*/
     font-size: 20px;
     font-style: 'Oswald', sans-serif;
     opacity: 0.7;
-
 }
 
 .panel-body {
     background-color: #ddd;
-    opacity: 0.5;
-
+    opacity: 1;
 }
 
-.panel-heading{
-
-}
 
 .panel-title {
     text-align: left;
@@ -152,6 +172,7 @@ serif;*/
 .btn-default {
     background-color: #ff6666;
 }
+
 .nav-pills {
     float: right;
 }
@@ -163,11 +184,24 @@ serif;*/
     font-size: 20px;
 }
 
+.grid-item {
+    width: 200px;
+}
 
-.grid-item { width: 200px; }
-
-.item{
+.item {
     font-size: 30px
 }
 
-.grid-item--width2 { width: 400px; }
+.grid-item--width2 {
+    width: 400px;
+}
+
+.full-w {
+    width: 100%;
+}
+
+h4 {
+    font-family: 'Playfair Display', serif;
+    font-size: 15px;
+    color: black;
+}

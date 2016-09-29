@@ -21,8 +21,7 @@
     <script src="https://www.gstatic.com/firebasejs/3.4.0/firebase.js"></script>
     <!-- style ref -->
     <link type="text/css" rel="stylesheet" href="assets/style.css">
-    <script src="https://unpkg.com/masonry-layout@4.1/dist/masonry.pkgd.min.js"></script>
-    <script src="/path/to/masonry.pkgd.min.js"></script>
+    
 </head>
 
 <body>
@@ -58,10 +57,10 @@
     <div class="form">
         <form class="fade-in two">
             <div class="form-group">
-                <label for="search" class="form"><h1>Search events by keyword</h1></label>
+                <label for="search" class="form">
+                    <h1>Search events by keyword</h1></label>
                 <input type="text" class="form-control" id="search" placeholder="Search by keyword:">
             </div>
-
             <button class="btn btn-default searchBtn">Search</button>
         </form>
     </div>
@@ -71,10 +70,10 @@
                 <div class="panel-heading">
                     <h3 class="panel-title">Results</h3>
                 </div>
-                <div class="panel-body grid" id="eventList">
-                    <div class="grid-item">...</div>
-                    <div class="grid-item grid-item--width2">...</div>
-                    <div class="grid-item">...</div>
+                <div class="panel-body">
+                    <div id="eventList" class="row grid" data-masonry-options='{ "columnWidth": ".grid-item", "itemSelector": ".grid-item" }'>
+                        <!-- grid stuff here -->
+                    </div>
                 </div>
             </div>
         </div>
@@ -90,8 +89,17 @@
     </div>
     <!-- script ref-->
     <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+    <script src="https://unpkg.com/masonry-layout@4.1/dist/masonry.pkgd.min.js"></script>
+    <script src="https://npmcdn.com/imagesloaded@4.1/imagesloaded.pkgd.min.js"></script>
     <script src="assets/Javascript/ticketmaster.js"></script>
     <script src="assets/Javascript/logic.js"></script>
+    <script>
+        var $grid = $('.grid').masonry({
+          itemSelector: '.grid-item',
+          columnWidth: '.grid-item',
+          percentPosition: true
+        });
+    </script>
 </body>
 
 </html>

@@ -21,9 +21,15 @@
     <script src="https://www.gstatic.com/firebasejs/3.4.0/firebase.js"></script>
     <!-- style ref -->
     <link type="text/css" rel="stylesheet" href="assets/style.css">
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+    <script src="assets/Javascript/ticketmaster.js"></script>
+    <script async defer
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCJD8OcK1RKA_JLzQz75t3GPN0DIayxeek&callback=initMap">
+    </script>
 </head>
 
 <body>
+    <div id="map"></div>
     <div class="row">
         <nav class="navbar navbar-inverse">
             <ul class="nav nav-tabs">
@@ -76,6 +82,7 @@
     </div>
     </div>
     </div>
+    
     <div class="navbar navbar-default navbar-fixed-bottom">
         <div class="container">
             <p class="navbar-text pull-left">© 2016 - Site Built by the Entertainers Group
@@ -83,9 +90,28 @@
         </div>
     </div>
     <!-- script ref-->
-    <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
-    <script src="assets/Javascript/ticketmaster.js"></script>
+
+    <!-- <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script> -->
+    <!-- <script src="assets/Javascript/ticketmaster.js"></script> -->
+
     <script src="assets/Javascript/logic.js"></script>
+    <script>
+    function initMap() {
+        console.log('HEEEEY')
+        var userPosition = {lat: 36.11202600, lng: -115.17693800}
+        console.log(userPosition)
+
+        var map = new google.maps.Map(document.getElementById('map'), {
+          zoom: 16,
+          center: userPosition
+        });
+         var marker = new google.maps.Marker({
+        map: map,
+        position: userPosition,
+         title: 'I am here'
+        });
+    }
+    </script>
 </body>
 
 </html>

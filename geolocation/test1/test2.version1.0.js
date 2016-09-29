@@ -75,12 +75,10 @@ getLocation();
           zoom: 16,
           center: uluru
         });
-        var marker = new google.maps.Marker({
+         var marker = new google.maps.Marker({
         map: map,
-        // icon: image,
-        // title: place.name,
-        // position: place.geometry.location
+        position: userPosition,
+         title: 'I am here'
         });
-        
 
       }

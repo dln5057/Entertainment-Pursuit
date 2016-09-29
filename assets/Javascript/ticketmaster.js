@@ -1,11 +1,15 @@
-console.log("loaded");
 
+    console.log("loaded");
+    // function initMap() {
+    //     var userPosition = {lat: 36.11202600, lng: -115.17693800}
+    //     console.log(userPosition)
 
-
-
-
-
-
+    //     var map = new google.maps.Map(document.getElementById('map'), {
+    //       zoom: 16,
+    //       center: userPosition
+    //     });
+    // }
+    // initMap();
 
 var eventLocation;
 $('.searchBtn').on('click', function(e){
@@ -15,7 +19,7 @@ $('.searchBtn').on('click', function(e){
 
     var queryURL = "https://app.ticketmaster.com/discovery/v2/events.Json?apikey=cAnARp0Bdf5EhZsX9PCXuiOGzhkmhFM7&keyword=" + eventLocation
 
-    $.ajax({ url: queryURL, method: 'GET' }).done(function(response) {
+    $.ajax({ url: queryURL, dataType: 'jsonp', method: 'GET' }).done(function(response) {
 
 
         console.log(response);
@@ -28,10 +32,10 @@ $('.searchBtn').on('click', function(e){
             var eventName = value.name;
             var p = $('<p>').text( "Name of Event: " + eventName);
             var location = value._embedded.venues[0].location;
-            var latitude = location.latitude;
-            var longitude = location.longitude;
-            console.log(latitude +" "+longitude);
-            // createNewMarker(latitude, longitude);
+            var lat = location.latitude;
+            var long = location.longitude;
+            console.log(lat +" "+long);
+             initMap(lat, long);
             var eventImage = $('<img>');
             $('img').addClass('posterImages');
             var eventPoster = value.images;

@@ -21,6 +21,8 @@
     <script src="https://www.gstatic.com/firebasejs/3.4.0/firebase.js"></script>
     <!-- style ref -->
     <link type="text/css" rel="stylesheet" href="assets/style.css">
+    <script src="https://unpkg.com/masonry-layout@4.1/dist/masonry.pkgd.min.js"></script>
+    <script src="/path/to/masonry.pkgd.min.js"></script>
 </head>
 
 <body>
@@ -69,10 +71,14 @@
                 <div class="panel-heading">
                     <h3 class="panel-title">Results</h3>
                 </div>
-                <div class="panel-body" id="eventList">
+                <div class="panel-body grid" id="eventList">
+                    <div class="grid-item">...</div>
+                    <div class="grid-item grid-item--width2">...</div>
+                    <div class="grid-item">...</div>
                 </div>
             </div>
         </div>
+    </div>
     </div>
     </div>
     </div>

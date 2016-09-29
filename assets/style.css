@@ -162,5 +162,8 @@ serif;*/
     overflow: auto;
     font-size: 20px;
     font-size: 20px;
-
 }
+
+.grid-item { width: 200px; }
+
+.grid-item--width2 { width: 400px; }

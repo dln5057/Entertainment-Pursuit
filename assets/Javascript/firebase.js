@@ -1,4 +1,4 @@
-alert("imhere");
+
 // Initialize Firebase
   var config = {
     apiKey: "AIzaSyA55zwV41PjpkzxVnI5AuAaIhHcCGp4kbM",

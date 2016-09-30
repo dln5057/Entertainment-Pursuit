@@ -17,9 +17,9 @@ $('.searchBtn').on('click', function(e){
         var events = response._embedded.events;
         $.each(events.slice(0, 20), function(index, value) {
             console.log(value.name);
-            var eventDiv = $('<div class="item grid-item col-xs-3">')
+            var eventDiv = $('<div class="item grid-item col-md-3 col-lg-6 col-xs-3">')
             var eventName = value.name;
-            var p = $('<h4>').text( "Name of Event: " + eventName);
+            var p = $('<h4>').text( "Event: " + eventName);
             var location = value._embedded.venues[0].location;
             var latitude = location.latitude;
             var longitude = location.longitude;

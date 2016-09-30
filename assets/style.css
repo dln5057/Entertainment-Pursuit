@@ -163,6 +163,7 @@ serif;*/
 
 .btn-default {
     background-color: #ff6666;
+
 }
 
 .nav-pills {
@@ -197,4 +198,12 @@ h4 {
 
 img {
     width: 100%;
+}
+
+button, input, select, textarea, .form-control {
+    font-size: inherit;
+    line-height: inherit;
+    font-family: 'Oswald', sans-serif;
+    color: black;
+    font-size: 10px;
 }

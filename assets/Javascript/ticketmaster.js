@@ -12,15 +12,17 @@ $('.searchBtn').on('click', function(e){
 
 
         console.log(response);
-        console.log(response._embedded.events)
+        console.log(response._embedded.events);
+        // console.log(response._embedded.events.);
 
         var events = response._embedded.events;
-        $.each(events.slice(0, 10), function(index, value) {
+        $.each(events.slice(0, 20), function(index, value) {
             console.log(value.name);
-            var eventDiv = $('<div class="item grid-item col-xs-3">')
+            var eventDiv = $('<div class="item grid-item col-md-3 col-lg-6 col-xs-3">')
             var eventName = value.name;
             var p = $('<h4>').text( "Name of Event: " + eventName);
             var favoriteBtn = $('<button type="button" class="btn btn-default btn-lg"> <span class="glyphicon glyphicon-star" aria-hidden="true"></span> Favorite </button>')
+            var p = $('<h4>').text( "Event: " + eventName);
             var location = value._embedded.venues[0].location;
             var latitude = location.latitude;
             var longitude = location.longitude;
@@ -29,14 +31,13 @@ $('.searchBtn').on('click', function(e){
             var eventImage = $('<img>');
             $('img').addClass('posterImages full-w');
             var eventPoster = value.images;
+
             $.each(eventPoster.slice(0, 1), function(index, source) {
                 var poster = source.url;
                 eventImage.attr('src', poster);
                 eventDiv.append(p);
                 eventDiv.append(eventImage)
                 eventDiv.append(favoriteBtn)
-
-
 
                 console.log(value.images)
 

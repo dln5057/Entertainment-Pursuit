@@ -15,30 +15,37 @@ var storageRef = storage.ref();
 
 var favoriteProfList = storageRef.child('favorites')
 
-$("#searchBtn").on("click", function(){
-
-  var searchInput = $("#search").val().trim();
-  // var numEventShowned = $("#numEvents").val().trim();
 
 
-  var newSearch = {
-     search: searchInput,
-     // numberOfSearches: numEventShowned, 
+// favoriteBtn.on("click", function(){
+//     push(favoriteProfList);  
 
-}
+// })
 
-  database.ref().push(newSearch);
+// $("#searchBtn").on("click", function(){
 
-$("#search").val("");
+//   var searchInput = $("#search").val().trim();
+//   // var numEventShowned = $("#numEvents").val().trim();
+
+
+//   var newSearch = {
+//      search: searchInput,
+//      // numberOfSearches: numEventShowned, 
+
+// }
+
+//   database.ref().push(newSearch);
+
+// $("#search").val("");
  
 
-  return false;
-})
+//   return false;
+// })
 
 
-database.ref().on("child_added", function(childSnapshot, prevChildKey){
-  var destinationName = childSnapshot.val().name;
-})
+// database.ref().on("child_added", function(childSnapshot, prevChildKey){
+//   var destinationName = childSnapshot.val().name;
+// })
 
 //////////////////////////////////////////////////////////////////
 
@@ -160,7 +167,7 @@ function initApp() {
         // [END_EXCLUDE]
         if (user) {
 
-          // window.location.href = "userProfile.html"
+          window.location.href = "userProfile.html"
           // document.write("welcome back" + displayName)
           // alert("user has signed in")
           // User is signed in.

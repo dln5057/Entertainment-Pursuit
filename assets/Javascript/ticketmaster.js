@@ -20,6 +20,8 @@ $('.searchBtn').on('click', function(e){
             console.log(value.name);
             var eventDiv = $('<div class="item grid-item col-md-3 col-lg-6 col-xs-3">')
             var eventName = value.name;
+            var p = $('<h4>').text( "Name of Event: " + eventName);
+            var favoriteBtn = $('<button type="button" class="btn btn-default btn-lg"> <span class="glyphicon glyphicon-star" aria-hidden="true"></span> Favorite </button>')
             var p = $('<h4>').text( "Event: " + eventName);
             var location = value._embedded.venues[0].location;
             var latitude = location.latitude;
@@ -35,6 +37,7 @@ $('.searchBtn').on('click', function(e){
                 eventImage.attr('src', poster);
                 eventDiv.append(p);
                 eventDiv.append(eventImage)
+                eventDiv.append(favoriteBtn)
 
                 console.log(value.images)
 

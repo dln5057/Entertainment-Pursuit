@@ -189,7 +189,7 @@ serif;*/
 }
 
 .item {
-    font-size: 30px
+    font-size: 30px;
 }
 
 .grid-item--width2 {
@@ -204,4 +204,8 @@ h4 {
     font-family: 'Playfair Display', serif;
     font-size: 15px;
     color: black;
+}
+
+img {
+    width: 100%;
 }

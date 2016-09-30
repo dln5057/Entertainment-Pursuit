@@ -15,7 +15,7 @@ $('.searchBtn').on('click', function(e){
         console.log(response._embedded.events)
 
         var events = response._embedded.events;
-        $.each(events.slice(0, 10), function(index, value) {
+        $.each(events.slice(0, 20), function(index, value) {
             console.log(value.name);
             var eventDiv = $('<div class="item grid-item col-xs-3">')
             var eventName = value.name;
@@ -28,6 +28,7 @@ $('.searchBtn').on('click', function(e){
             var eventImage = $('<img>');
             $('img').addClass('posterImages full-w');
             var eventPoster = value.images;
+        
             $.each(eventPoster.slice(0, 1), function(index, source) {
                 var poster = source.url;
                 eventImage.attr('src', poster);

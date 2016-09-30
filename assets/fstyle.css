@@ -1,14 +1,14 @@
-img.posterImages {
+/*img.posterImages {
     width: 300px;
     height: 200px;
 }
-
+*/
 body {
     background-image: url('wall.png');
     background-repeat: repeat;
     text-align: center;
     font-family: 'Lobster', serif;
-    font-size: 100px;
+    font-size: 80px;
     color: #d3d3d3;
     height: 100%;
 }
@@ -17,13 +17,6 @@ body {
     font-size: 15px;
     font-family: 'Vast Shadow', cursive;
     margin: 10px;
-
-}
-
-h1 {
-    font-family: 'Oswald', sans-serif;
-    font-size: 30px;
-    opacity: 0.5;
 
 }
 
@@ -78,12 +71,7 @@ h2 {
     animation-delay: 1.6s;
 }
 
-/*font-family: 'Vast Shadow',
-cursive;
-font-family: 'Playfair Display',
-serif;
-font-family: 'Playfair Display SC',
-serif;*/
+/*adding social icons to the right of the nav*/
 .btn-social-icon {
     float: right;
 }
@@ -94,59 +82,8 @@ serif;*/
 }
 
 .row {
-    margin-right: 0px;
-    margin-left: 0px;
-
-
-}
-
-.img-responsive {
-    position: relative;
-    float:left;
-    width:200px;
-    height:200px;
-    background-position: 50% 50%;
-    background-repeat:no-repeat;
-    background-size:cover;
-}
-#team {
-       display: -webkit-inline-box;
-}
-
-.media-object {
-    position: relative;
-    float:left;
-    width:200px;
-    height:200px;
-    background-position: 50% 50%;
-    background-repeat:no-repeat;
-    background-size:cover;
-    margin-left: 100px;
-}
-
-.form {
-    display: -webkit-inline-box;
-    font-size: 20px;
-    font-style: 'Oswald', sans-serif;
-    opacity: 0.7;
-
-}
-
-.panel-body {
-    background-color: #ff6666;
-    opacity: 0.5;
-
-}
-
-.panel-heading{
-
-}
-
-.panel-title {
-    text-align: left;
-    font-family: 'Vast Shadow', cursive;
-    font-size: 17px;
-    color: #ff6666;
+    margin-right: 0;
+    margin-left: 0;
 }
 
 .btn-default {
@@ -167,4 +104,14 @@ serif;*/
 
 #user {
     font-size: 15px;
+    font-family: 'Oswald', sans-serif;
+}
+
+
+button, input, select, textarea {
+    font-size: inherit;
+    line-height: inherit;
+    font-family: : 'Oswald', sans-serif;
+    color: black;
+    font-size: 10px;
 }

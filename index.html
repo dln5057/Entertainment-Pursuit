@@ -12,30 +12,30 @@
     <link href="https://fonts.googleapis.com/css?family=Oswald|Playfair+Display|Playfair+Display+SC|Vast+Shadow|Lobster|Tangerine" rel="stylesheet">
     <!-- Font Awsome ref -->
     <script src="https://use.fontawesome.com/65a539dfcc.js"></script>
-    <!-- boostrap ref -->
+    <!-- Boostrap ref -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap
 .min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-    <!-- social css -->
+    <!-- Social.css ref-->
     <link type="text/css" rel="stylesheet" href="assets/bootstrap-social.css">
     <!-- Firebase reference -->
     <script src="https://www.gstatic.com/firebasejs/3.4.0/firebase.js"></script>
     <!-- style ref -->
     <link type="text/css" rel="stylesheet" href="assets/style.css">
-    <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
-    <script src="assets/Javascript/ticketmaster.js"></script>
-    <script async defer
-        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCJD8OcK1RKA_JLzQz75t3GPN0DIayxeek&callback=initMap">
-    </script>
 </head>
 
 <body>
+    <!-- Google map -->
     <div id="map"></div>
+    <!-- Navbar top with tabs -->
     <div class="row">
         <nav class="navbar navbar-inverse">
             <ul class="nav nav-tabs">
+                <li role="presentation"><a href="landing.html">Get Started</a></li>
+                <li role="presentation"><a href="index.html">Home</a></li>
                 <li role="presentation"><a href="team.html">Team</a></li>
                 <li role="presentation"><a href="#">Presentation</a></li>
                 <li role="presentation"><a href="#">Inspiration</a></li>
+                <!-- add social buttons -->
                 <a class="btn btn-social-icon btn-twitter"><span class="fa fa-twitter"></span>
                 </a>
                 <a class="btn btn-social-icon btn-facebook"><span class="fa fa-facebook"></span>
@@ -55,7 +55,6 @@
         <div class="row">
             <div class="gore fade-in one">
                 <p>Entertainment Pursuit</p>
-                <!-- <h1 class="fade-in two">Helps you find entertainement nearby</h1> -->
             </div>
         </div>
     </div>
@@ -64,7 +63,7 @@
             <div class="form-group">
                 <label for="search" class="form">
                     <h1>Search events by keyword</h1></label>
-                <input type="text" class="form-control" id="search" placeholder="Search by keyword:">
+                <input type="text" class="form-control inputStyle" id="search" placeholder="Search by keyword:">
             </div>
             <button class="btn btn-default searchBtn">Search</button>
         </form>
@@ -79,48 +78,53 @@
                     <div id="eventList" class="row grid" data-masonry-options='{ "columnWidth": ".grid-item", "itemSelector": ".grid-item" }'>
                         <!-- grid stuff here -->
                     </div>
-                <div class="panel-body" id="eventList">
                 </div>
             </div>
         </div>
     </div>
     </div>
-    </div>
-    
     <div class="navbar navbar-default navbar-fixed-bottom">
         <div class="container">
             <p class="navbar-text pull-left">© 2016 - Site Built by the Entertainers Group
             </p>
         </div>
     </div>
-    <!-- script ref-->
+    <!-- jQuery ref -->
     <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+    <!-- Ticketmaster.js link -->
+    <script src="assets/Javascript/ticketmaster.js"></script>
+    <!-- Ref for google maps api -->
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCJD8OcK1RKA_JLzQz75t3GPN0DIayxeek&callback=initMap">
+    </script>
     <script src="https://unpkg.com/masonry-layout@4.1/dist/masonry.pkgd.min.js"></script>
     <script src="https://npmcdn.com/imagesloaded@4.1/imagesloaded.pkgd.min.js"></script>
-    <script src="assets/Javascript/ticketmaster.js"></script>
+    <!-- logic.js ref -->
     <script src="assets/Javascript/logic.js"></script>
     <script>
-        var $grid = $('.grid').masonry({
-          itemSelector: '.grid-item',
-          columnWidth: '.grid-item',
-          percentPosition: true
+    var $grid = $('.grid').masonry({
+        itemSelector: '.grid-item',
+        columnWidth: '.grid-item',
+        percentPosition: true
+    });
+
+    function initMap() {
+        console.log('HEEEEY')
+        var userPosition = {
+            lat: 36.11202600,
+            lng: -115.17693800
+        }
+        console.log(userPosition)
+
+        var map = new google.maps.Map(document.getElementById('map'), {
+            zoom: 16,
+            center: userPosition
         });
-
-        function initMap() {
-            console.log('HEEEEY')
-            var userPosition = {lat: 36.11202600, lng: -115.17693800}
-            console.log(userPosition)
-
-            var map = new google.maps.Map(document.getElementById('map'), {
-              zoom: 16,
-              center: userPosition
-            });
-             var marker = new google.maps.Marker({
+        var marker = new google.maps.Marker({
             map: map,
             position: userPosition,
-             title: 'I am here'
-            });
-        }
+            title: 'I am here'
+        });
+    }
     </script>
 </body>
 
